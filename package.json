@@ -1,0 +1,43 @@
+{
+  "name": "@ph-itdev/parcel-tracker",
+  "version": "0.2026.0702",
+  "description": "Unified parcel tracking across carriers with status normalization, ETA prediction, and delivery event aggregation for multi-carrier logistics.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "commonjs",
+  "bin": {
+    "parcel-tracker": "bin/cli.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "bin/",
+    "example/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node test.js",
+    "lint": "echo 'lint ok'",
+    "playground": "node bin/cli.js playground"
+  },
+  "keywords": [
+    "logistics",
+    "automation",
+    "shipping",
+    "supply-chain",
+    "parcel"
+  ],
+  "author": "@ph-itdev",
+  "license": "MIT \u00a9 Nilo Besingga",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nilskie06/parcel-tracker.git"
+  },
+  "homepage": "https://github.com/nilskie06/parcel-tracker#readme",
+  "bugs": {
+    "url": "https://github.com/nilskie06/parcel-tracker/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@ph-itdev/parcel-tracker — Live Playground</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'JetBrains Mono','Fira Code',monospace; background: #0a0e1a; color: #e0e6f0; min-height: 100vh; }
+  .header { background: linear-gradient(135deg, #0c1430 0%, #1a0a2e 100%); border-bottom: 1px solid rgba(0,229,255,0.15); padding: 24px 32px; text-align: center; }
+  .header h1 { font-size: 28px; color: #00e5ff; margin-bottom: 6px; letter-spacing: 2px; }
+  .header p { color: #7eb8c9; font-size: 13px; opacity: 0.7; }
+  .header .badge { display: inline-block; background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.3); color: #00e5ff; padding: 4px 12px; border-radius: 4px; font-size: 12px; margin-top: 10px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+  .panel { background: rgba(12,20,48,0.8); border: 1px solid rgba(0,229,255,0.1); border-radius: 10px; padding: 18px; }
+  .panel h2 { font-size: 14px; color: #00e5ff; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px dashed rgba(0,229,255,0.15); }
+  label { display: block; font-size: 11px; color: #7eb8c9; margin-bottom: 4px; letter-spacing: 1px; }
+  input, select { width: 100%; background: rgba(0,229,255,0.04); border: 1px solid rgba(0,229,255,0.15); color: #e0e6f0; padding: 8px 12px; border-radius: 6px; font-family: inherit; font-size: 13px; margin-bottom: 10px; outline: none; }
+  input:focus, select:focus { border-color: rgba(0,229,255,0.5); }
+  select option { background: #0c1430; }
+  .row { display: flex; gap: 10px; } .row > * { flex: 1; }
+  button { background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(0,229,255,0.05)); border: 1px solid rgba(0,229,255,0.35); color: #00e5ff; padding: 10px 18px; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 13px; letter-spacing: 1px; transition: all 0.2s; margin-top: 4px; }
+  button:hover { background: rgba(0,229,255,0.2); box-shadow: 0 0 12px rgba(0,229,255,0.2); }
+  button.danger { border-color: rgba(255,100,100,0.4); color: #ff6464; }
+  button.danger:hover { background: rgba(255,100,100,0.15); }
+  .output { background: #060a14; border: 1px solid rgba(0,229,255,0.08); border-radius: 8px; padding: 14px; font-size: 12px; line-height: 1.6; max-height: 400px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; }
+  .output .log { color: #7eb8c9; } .output .success { color: #28c840; } .output .error { color: #ff6464; } .output .info { color: #00e5ff; } .output .warn { color: #ffb352; }
+  .full-width { grid-column: 1 / -1; }
+  ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: rgba(0,229,255,0.2); border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📦 parcel-tracker</h1>
+  <p>Unified parcel tracking across carriers with status normalization, ETA prediction, and delivery event aggregation for multi-carrier logistics.</p>
+  <span class="badge">npm install @ph-itdev/parcel-tracker</span>
+</div>
+<div class="container">
+  <div class="grid">
+    <div class="panel">
+      <h2>🚀 Try It</h2>
+      <p style="font-size:12px;color:#7eb8c9;margin-bottom:12px;">Run in your terminal:</p>
+      <div class="output" style="max-height:none;">
+<div class="info"># Install</div>
+<div class="success">npm install @ph-itdev/parcel-tracker</div>
+<br>
+<div class="info"># Open playground</div>
+<div class="success">npx parcel-tracker playground</div>
+<br>
+<div class="info"># Use in code</div>
+<div class="log">const pkg = require('@ph-itdev/parcel-tracker');</div>
+<div class="log">console.log(Object.keys(pkg));</div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>📦 Package Info</h2>
+      <div class="output" style="max-height:none;">
+<div class="log">Name:     @ph-itdev/parcel-tracker</div>
+<div class="log">Version:  1.0.0</div>
+<div class="log">License:  MIT</div>
+<div class="log">Author:   @ph-itdev</div>
+<div class="log">Registry: npmjs.com</div>
+<div class="log">Repo:     github.com/nilskie06/parcel-tracker</div>
+      </div>
+    </div>
+    <div class="panel full-width">
+      <h2>💻 Console</h2>
+      <div id="console" class="output"></div>
+    </div>
+  </div>
+</div>
+<script>
+function log(msg, cls='log') {
+  const el = document.getElementById('console');
+  const line = document.createElement('div');
+  line.className = cls;
+  line.textContent = '[' + new Date().toLocaleTimeString() + '] ' + msg;
+  el.appendChild(line);
+  el.scrollTop = el.scrollHeight;
+}
+log('🚀 Welcome! This is the interactive playground for @ph-itdev/parcel-tracker', 'info');
+log('   Install: npm install @ph-itdev/parcel-tracker', 'info');
+log('   CLI: npx parcel-tracker playground', 'info');
+</script>
+</body>
+</html>
