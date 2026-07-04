@@ -1,6 +1,6 @@
 {
   "name": "@ph-itdev/parcel-tracker",
-  "version": "0.2026.703",
+  "version": "0.2026.704",
   "description": "Unified parcel tracking across carriers with status normalization, ETA prediction, and delivery event aggregation for multi-carrier logistics.",
   "main": "index.js",
   "types": "index.d.ts",
