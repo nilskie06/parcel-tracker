@@ -28,6 +28,10 @@ MIT
 
 ## Changelog
 
+### v0.2026.705 (2026-07-05)
+- Added JSDoc documentation
+- Daily auto-update
+
 ### v0.2026.704 (2026-07-04)
 - Added usage examples
 - Daily auto-update
