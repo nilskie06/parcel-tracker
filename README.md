@@ -28,6 +28,10 @@ MIT
 
 ## Changelog
 
+### v0.2026.706 (2026-07-10)
+- Added utility helpers (uuid, retry, chunk, clamp)
+- Daily auto-update
+
 ### v0.2026.705 (2026-07-05)
 - Added JSDoc documentation
 - Daily auto-update
